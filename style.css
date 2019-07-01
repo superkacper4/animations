@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  font-size: 1.6rem;
+  background-color: #be3939;
+  color: white;
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+div {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.box1 {
+  border-radius: 50px;
+  z-index: 2;
+  animation: box1 5s ease-in-out 0.25s both;
+}
+
+.box2 {
+  animation: box2 5s ease-in-out 0.25s both;
+}
+
+@keyframes box1 {
+  0% {
+    opacity: 0;
+    background-color: aquamarine;
+    transform: translateY(600px) translateX(0) rotate(-180deg) scale(1);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+    background-color: aquamarine;
+  }
+
+  75% {
+    background-color: grey;
+    transform: translateY(-120px) translateX(120px);
+  }
+
+  100% {
+    background-color: grey;
+    transform: translateY(-120px) translateX(120px) rotate(0) scale(2.2);
+  }
+}
+
+@keyframes box2 {
+  0% {
+    opacity: 0;
+    background-color: aquamarine;
+    transform: translateX(600px) rotate(-180deg);
+    border-radius: 50px;
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateX(0) rotate(-45deg);
+    background-color: aquamarine;
+  }
+
+  75% {
+    background-color: rgb(48, 48, 48);
+    border-radius: 50px;
+  }
+
+  78% {
+    border-radius: 50px;
+    transform: translateX(0) rotate(-45deg);
+  }
+
+  100% {
+    border-radius: 0;
+    background-color: rgb(48, 48, 48);
+    transform: rotate(-45deg) scaleX(4);
+  }
+}
